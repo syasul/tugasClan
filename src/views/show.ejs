@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= item.nama %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">
+            <%= item.nama %>
+        </h1>
+        <p>
+            <%= item.deskripsi %>
+        </p>
+        <a href="/" class="btn btn-primary">Kembali</a>
+        <form action="/items/<%= item.id %>/delete" method="post" class="d-inline">
+            <button type="submit" class="btn btn-danger">Hapus</button>
+        </form>
+        <a href="/items/<%= item.id %>/edit" class="btn btn-secondary">Edit</a>
+    </div>
+</body>
+
+</html>

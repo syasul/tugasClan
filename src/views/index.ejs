@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contoh CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Daftar Item</h1>
+        <ul class="list-group">
+            <% items.forEach(item=> { %>
+                <li class="list-group-item">
+                    <%= item.nama %>
+                </li>
+                <% }); %>
+        </ul>
+        <form action="/items" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" name="nama" id="nama" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="deskripsi">Deskripsi:</label>
+                <textarea name="deskripsi" id="deskripsi" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Tambah Item</button>
+        </form>
+    </div>
+</body>
+
+</html>
